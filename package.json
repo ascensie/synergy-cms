@@ -5,7 +5,9 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts nodemon",
-    "build": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload build",
+    "build": "npm run build:server && npm run build:admin",
+    "build:server": "tsc",
+    "build:admin": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload build",
     "serve": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts NODE_ENV=production node dist/server.js",
     "generate:types": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload generate:types",
     "migrate:data": "tsx scripts/migrate-data.ts",
