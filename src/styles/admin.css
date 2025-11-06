@@ -1,0 +1,364 @@
+/* Funnel Synergy Admin Theme */
+
+/* Override Payload's color system - force light theme */
+:root,
+html[data-theme='light'],
+html[data-theme='dark'] {
+  /* Base colors - always light */
+  --theme-elevation-0: rgb(255, 255, 255);
+  --theme-elevation-50: rgb(245, 247, 250);
+  --theme-elevation-100: rgb(232, 238, 243);
+  --theme-elevation-150: rgb(223, 231, 236);
+  --theme-elevation-200: rgb(209, 220, 229);
+  --theme-elevation-250: rgb(194, 211, 222);
+  --theme-elevation-300: rgb(179, 202, 215);
+  --theme-elevation-400: rgb(149, 184, 203);
+  --theme-elevation-500: rgb(119, 166, 191);
+  --theme-elevation-600: rgb(89, 148, 179);
+  --theme-elevation-700: rgb(59, 130, 167);
+  --theme-elevation-800: rgb(28, 130, 173);
+  --theme-elevation-900: rgb(3, 172, 144);
+  --theme-elevation-1000: rgb(11, 19, 43);
+
+  /* Funnel Synergy Brand Colors */
+  --theme-success-500: rgb(3, 172, 144); /* Teal */
+  --theme-warning-500: rgb(255, 194, 71); /* Gold */
+  --theme-error-500: rgb(220, 38, 38);
+
+  /* Background and text */
+  --theme-bg: rgb(255, 255, 255);
+  --theme-text: rgb(11, 19, 43);
+  --theme-input-bg: rgb(245, 247, 250);
+  --theme-border-color: rgb(229, 231, 235);
+
+  /* Primary colors */
+  --theme-primary: rgb(3, 172, 144); /* Teal */
+  --theme-primary-hover: rgb(28, 130, 173); /* Teal Alt */
+}
+
+/* Sidebar - Navy background */
+.template-default__nav,
+.nav,
+.nav__wrap {
+  background-color: rgb(11, 19, 43);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav__link {
+  color: rgb(255, 255, 255);
+  transition: all 0.2s ease;
+}
+
+.nav__link--active,
+.nav__link:hover {
+  background-color: rgb(3, 172, 144);
+  color: rgb(255, 255, 255);
+}
+
+/* Top header bar */
+.app-header,
+.template-default__header {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(229, 231, 235);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.app-header *,
+.template-default__header * {
+  color: rgb(11, 19, 43);
+}
+
+/* Breadcrumbs area */
+.breadcrumbs,
+.step-nav {
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+.breadcrumbs *,
+.step-nav * {
+  color: rgb(11, 19, 43);
+}
+
+.breadcrumbs a,
+.step-nav a {
+  color: rgb(3, 172, 144);
+}
+
+.breadcrumbs a:hover,
+.step-nav a:hover {
+  color: rgb(28, 130, 173);
+}
+
+/* Main wrapper - white background */
+.template-default__wrap {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Main content area - white background */
+.template-default__content,
+.render-default {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Buttons */
+.btn--style-primary {
+  background-color: rgb(3, 172, 144);
+  border-color: rgb(3, 172, 144);
+}
+
+.btn--style-primary:hover {
+  background-color: rgb(28, 130, 173);
+  border-color: rgb(28, 130, 173);
+}
+
+.btn--style-secondary {
+  background-color: rgb(255, 194, 71);
+  border-color: rgb(255, 194, 71);
+  color: rgb(11, 19, 43);
+}
+
+.btn--style-secondary:hover {
+  opacity: 0.9;
+}
+
+/* Links */
+a {
+  color: rgb(3, 172, 144);
+}
+
+a:hover {
+  color: rgb(28, 130, 173);
+}
+
+/* Form inputs focus */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: rgb(3, 172, 144);
+  box-shadow: 0 0 0 1px rgb(3, 172, 144);
+}
+
+/* Toggle switches */
+.toggle-button--is-on {
+  background-color: rgb(3, 172, 144);
+}
+
+/* Badge & Pills */
+.pill--style-success,
+.badge--style-success {
+  background-color: rgb(3, 172, 144);
+}
+
+.pill--style-warning,
+.badge--style-warning {
+  background-color: rgb(255, 194, 71);
+  color: rgb(11, 19, 43);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(245, 247, 250);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(3, 172, 144);
+  border-radius: 10px;
+  border: 2px solid rgb(245, 247, 250);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(28, 130, 173);
+}
+
+/* Custom logo styling */
+.custom-logo {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 60px;
+  background-color: rgb(11, 19, 43);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.custom-logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navigation icons using Lucide SVG via CSS */
+.nav__link::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+/* Users icon - Lucide Users */
+.nav__link[href*="/admin/collections/users"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Cpath d='M16 3.128a4 4 0 0 1 0 7.744'/%3E%3Cpath d='M22 21v-2a4 4 0 0 0-3-3.87'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3C/svg%3E");
+}
+
+/* Media icon - Lucide Image */
+.nav__link[href*="/admin/collections/media"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='18' height='18' x='3' y='3' rx='2' ry='2'/%3E%3Ccircle cx='9' cy='9' r='2'/%3E%3Cpath d='m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21'/%3E%3C/svg%3E");
+}
+
+/* Blog Posts icon - Lucide FileText */
+.nav__link[href*="/admin/collections/blog-posts"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z'/%3E%3Cpath d='M14 2v4a2 2 0 0 0 2 2h4'/%3E%3Cpath d='M10 9H8'/%3E%3Cpath d='M16 13H8'/%3E%3Cpath d='M16 17H8'/%3E%3C/svg%3E");
+}
+
+/* Products icon - Lucide Package */
+.nav__link[href*="/admin/collections/products"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z'/%3E%3Cpath d='M12 22V12'/%3E%3Cpath d='m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7'/%3E%3Cpath d='m7.5 4.27 9 5.15'/%3E%3C/svg%3E");
+}
+
+/* Team Members icon - Lucide Users */
+.nav__link[href*="/admin/collections/team-members"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Cpath d='M16 3.128a4 4 0 0 1 0 7.744'/%3E%3Cpath d='M22 21v-2a4 4 0 0 0-3-3.87'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3C/svg%3E");
+}
+
+/* Testimonials icon - Lucide MessageSquare */
+.nav__link[href*="/admin/collections/testimonials"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/%3E%3C/svg%3E");
+}
+
+/* Features icon - Lucide Sparkles */
+.nav__link[href*="/admin/collections/features"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z'/%3E%3Cpath d='M20 2v4'/%3E%3Cpath d='M22 4h-4'/%3E%3Ccircle cx='4' cy='20' r='2'/%3E%3C/svg%3E");
+}
+
+/* Pricing Plans icon - Lucide CreditCard */
+.nav__link[href*="/admin/collections/pricing-plans"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='14' x='2' y='5' rx='2'/%3E%3Cpath d='M2 10h20'/%3E%3C/svg%3E");
+}
+
+/* FAQ icon - Lucide HelpCircle */
+.nav__link[href*="/admin/collections/faq"]::before,
+.nav__link[href*="/admin/collections/faqs"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E");
+}
+
+/* Services icon - Lucide Briefcase */
+.nav__link[href*="/admin/collections/services"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'/%3E%3Crect width='20' height='14' x='2' y='6' rx='2'/%3E%3C/svg%3E");
+}
+
+/* Integrations icon - Lucide Plug */
+.nav__link[href*="/admin/collections/integrations"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22v-5'/%3E%3Cpath d='M9 8V2'/%3E%3Cpath d='M15 8V2'/%3E%3Cpath d='M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z'/%3E%3C/svg%3E");
+}
+
+/* Brands icon - Lucide Award */
+.nav__link[href*="/admin/collections/brands"]::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526'/%3E%3Ccircle cx='12' cy='8' r='6'/%3E%3C/svg%3E");
+}
+
+/* Navigation refinements */
+.nav__list {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav__list-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Table row hover states */
+.table__row:hover {
+  background-color: rgb(245, 247, 250);
+}
+
+/* Publish/Save bar */
+.form-submit {
+  background-color: rgb(255, 255, 255);
+  border-top: 1px solid rgb(229, 231, 235);
+}
+
+/* Status indicators */
+.status-indicator--published {
+  background-color: rgb(3, 172, 144);
+}
+
+.status-indicator--draft {
+  background-color: rgb(255, 194, 71);
+}
+
+/* Card styling */
+.card {
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(3, 172, 144, 0.1);
+}
+
+/* Tooltip styling */
+.tooltip {
+  background-color: rgb(11, 19, 43);
+  color: rgb(255, 255, 255);
+}
+
+/* Loading spinner */
+.spinner {
+  border-top-color: rgb(3, 172, 144);
+}
+
+/* Rich text editor toolbar */
+.rich-text__toolbar {
+  background-color: rgb(245, 247, 250);
+  border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+.rich-text__toolbar button:hover {
+  background-color: rgb(3, 172, 144);
+  color: rgb(255, 255, 255);
+}
+
+/* Collection list view enhancements */
+.collection-list__header {
+  background-color: rgb(245, 247, 250);
+}
+
+/* Notification banners */
+.notification--success {
+  border-left: 4px solid rgb(3, 172, 144);
+}
+
+.notification--warning {
+  border-left: 4px solid rgb(255, 194, 71);
+}
+
+.notification--error {
+  border-left: 4px solid rgb(220, 38, 38);
+}
+
+/* Login page branding */
+.login-page {
+  background: linear-gradient(135deg, rgb(11, 19, 43) 0%, rgb(28, 130, 173) 100%);
+}
+
+.login-card {
+  box-shadow: 0 10px 40px rgba(11, 19, 43, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .custom-logo img {
+    height: 32px;
+  }
+}
