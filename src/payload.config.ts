@@ -1,6 +1,6 @@
 import { buildConfig } from 'payload/config'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
-import { webpackBundler } from '@payloadcms/bundler-webpack'
+import { viteBundler } from '@payloadcms/bundler-vite'
 import { slateEditor } from '@payloadcms/richtext-slate'
 import path from 'path'
 
@@ -26,7 +26,7 @@ export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || `http://localhost:${process.env.PAYLOAD_PORT || 7070}`,
   admin: {
     user: Users.slug,
-    bundler: webpackBundler(),
+    bundler: viteBundler(),
     meta: {
       titleSuffix: '- Funnel Synergy',
       favicon: '/assets/favicon.jpg',
